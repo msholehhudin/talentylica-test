@@ -15,9 +15,6 @@ function App() {
   const [result, setResult] = useState(null)
 
   const updateScore = (studentId, aspekIdx, val) => {
-    console.log("Student Id : ", studentId)
-    console.log("Aspek ID : ", aspekIdx)
-    console.log("Val : ", val)
     setStudents(prev => 
       prev.map(s => s.id === studentId ? {
         ...s, 
@@ -26,8 +23,6 @@ function App() {
         ))
       } : s)
     )
-
-    console.log("student :",students)
   }
 
   const handleSimpan = () => {
@@ -48,16 +43,7 @@ function App() {
 
         <div className='mb-4'>
           <h1 className='text-2xl font-bold text-slate-200 tracking-light'>Aspek Penilaian Mahasiswa</h1>
-          {/* <p>Masukkan nilai untuk setiap aspek penilaian</p> */}
         </div>
-
-        {/* <div className='bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden'>
-
-              <div className="bg-linear-to-r from-indigo-600 to-indigo-500 px-5 py-3 flex items-center gap-3">
-                <span className="text-indigo-200 text-xs font-semibold uppercase tracking-widest">Daftar Mahasiswa</span>
-              </div>
-
-        </div> */}
 
         {/* Table */}
         <table className="w-full border-collapse">
